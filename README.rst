@@ -39,7 +39,7 @@ Usage
 
 Create banner ads by creating ``BannerAd`` objects in the Django admin.
 
-Hook them up in your tempalte by just adding the ``get_banner`` inclusion tag.
+Hook them up in your template by just adding the ``get_banner`` inclusion tag.
 
 .. code-block:: html
 

@@ -37,6 +37,11 @@ class BannerAd(models.Model):
         max_length=64,
     )
 
+    def admin_thumbnail(self):
+        return '<a href="{0}"><img src="{0}" height=50 /></a>'.format(self.image.url)
+    admin_thumbnail.short_description = 'Image'
+    admin_thumbnail.allow_tags = True
+
     def __unicode__(self):
         return self.link_alt_text
 
