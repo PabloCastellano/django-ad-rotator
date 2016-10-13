@@ -10,12 +10,21 @@ register = template.Library()
 
 
 @register.inclusion_tag('ad_rotator/partials/banner.html')
-def get_banner():
-    """Returns a random ``BannerAd`` instance."""
+def get_banner(size):
+    """
+    Returns a random ``BannerAd`` instance.
+
+    Usage:
+    {% load ad_rotator_tags %}
+    {% get_banner 'leaderboard' %}
+
+    """
     banner = None
 
     banners = models.BannerAd.objects.filter(
-        start_date__lte=now().date(), end_date__gte=now().date())
+        start_date__lte=now().date(),
+        end_date__gte=now().date(),
+        size=size)
 
     if banners.count():
         banner = random.choice(banners)

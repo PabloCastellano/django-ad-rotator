@@ -3,6 +3,12 @@ from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
 
+BANNER_SIZES = (
+    ('leaderboard', 'Leaderboard (728x90)'),
+    ('large_mobile', 'Large Mobile (320x100)'),
+)
+
+
 class BannerAd(models.Model):
     """
     Holds the content of the ad.
@@ -36,6 +42,8 @@ class BannerAd(models.Model):
         verbose_name=_('Link alt text'),
         max_length=64,
     )
+
+    size = models.CharField(max_length=20, choices=BANNER_SIZES)
 
     def admin_thumbnail(self):
         return '<a href="{0}"><img src="{0}" height=50 /></a>'.format(self.image.url)
