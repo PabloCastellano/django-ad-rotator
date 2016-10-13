@@ -13,7 +13,7 @@ from django.conf import settings
 
 import coverage
 
-import test_settings
+from . import test_settings
 
 
 if not settings.configured:

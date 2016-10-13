@@ -13,5 +13,5 @@ class BannerAdFactory(factory.DjangoModelFactory):
     start_date = now() - timedelta(days=7)
     end_date = now() + timedelta(days=7)
     image = factory.django.ImageField()
-    link_url = factory.Sequence(lambda n: u'http://example.com/0/'.format(n))
-    link_alt_text = factory.Sequence(lambda n: u'link_alt_text {0}'.format(n))
+    link_url = factory.Sequence(lambda n: 'http://example.com/0/'.format(n))
+    link_alt_text = factory.Sequence(lambda n: 'link_alt_text {0}'.format(n))
