@@ -29,7 +29,7 @@ class BannerAd(models.Model):
     )
 
     image = models.ImageField(
-        upload_to='banner_ads',
+        upload_to='banners',
         verbose_name=_('Image'),
     )
 

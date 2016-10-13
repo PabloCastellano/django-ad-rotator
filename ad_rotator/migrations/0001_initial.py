@@ -19,7 +19,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('start_date', models.DateField(verbose_name='Start date')),
                 ('end_date', models.DateField(verbose_name='End date')),
-                ('image', models.ImageField(upload_to='banner_ads', verbose_name='Image')),
+                ('image', models.ImageField(upload_to='banners', verbose_name='Image')),
                 ('link_url', models.URLField(max_length=256, verbose_name='Link URL')),
                 ('link_alt_text', models.CharField(max_length=64, verbose_name='Link alt text')),
             ],
